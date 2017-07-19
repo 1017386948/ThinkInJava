@@ -1,9 +1,14 @@
 package innerclass;
 
 public class Outer {
+	private String s;
 	class Inner{
 		Inner(){
 			System.out.println("Inner.");
+		}
+		@Override
+		public String toString(){
+			return s;
 		}
 		
 	}
@@ -12,8 +17,8 @@ public class Outer {
 	}
 	
 	public static void main(String[] args){
-		Outer o = new Outer();
-		Outer.Inner i = o.getInner();
+		Outer.Inner i = new Outer().getInner();
+		System.out.println(i.toString());
 	}
 	
 }
