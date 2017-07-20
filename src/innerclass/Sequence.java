@@ -34,9 +34,17 @@ public class Sequence {
 				i++;
 		}
 		
+		public Sequence getSequence(){
+			return Sequence.this;
+		}
+		
 	}
 	public Selector selector(){
 		return new SequenceSelector();
+	}
+	
+	public void print(){
+		System.out.println("this.");
 	}
 	
 	public static void main(String[] args){
@@ -49,6 +57,8 @@ public class Sequence {
 			System.out.println(selector.current().toString());
 			selector.next();
 		}
+		((SequenceSelector) selector).getSequence().print();
+		
 	}
 }
 

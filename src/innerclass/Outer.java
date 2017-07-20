@@ -17,8 +17,12 @@ public class Outer {
 	}
 	
 	public static void main(String[] args){
-		Outer.Inner i = new Outer().getInner();
-		System.out.println(i.toString());
+//		Outer.Inner i = new Outer().getInner();
+//		System.out.println(i.toString());
+		Outer o = new Outer();
+//		Outer.Inner oi =  o.getInner();
+		Outer.Inner oi = o.new Inner();
+		System.out.println(oi.toString());
 	}
 	
 }
