@@ -39,6 +39,30 @@ public class Sequence {
 		}
 		
 	}
+	
+	private class ReverseSelector implements Selector{
+		int i = items.length - 1;
+		@Override
+		public boolean end() {
+			return i < 0;
+		}
+
+		@Override
+		public Object current() {
+			return items[i];
+		}
+
+		@Override
+		public void next() {
+			if(i >= 0) i--;
+		}
+		
+	}
+	
+	public Selector reverseSelector(){
+		return new ReverseSelector();
+	}
+	
 	public Selector selector(){
 		return new SequenceSelector();
 	}
@@ -57,7 +81,11 @@ public class Sequence {
 			System.out.println(selector.current().toString());
 			selector.next();
 		}
-		((SequenceSelector) selector).getSequence().print();
+		Selector reverseselector = sequence.reverseSelector();
+		while(!reverseselector.end()){
+			System.out.println(reverseselector.current().toString());
+			reverseselector.next();
+		}
 		
 	}
 }

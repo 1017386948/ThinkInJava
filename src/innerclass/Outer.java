@@ -3,6 +3,7 @@ package innerclass;
 public class Outer {
 	private String s;
 	class Inner{
+		int i = 0 ;
 		Inner(){
 			System.out.println("Inner.");
 		}
