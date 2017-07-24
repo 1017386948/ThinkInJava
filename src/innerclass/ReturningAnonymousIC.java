@@ -8,7 +8,7 @@ class NoDefault {
 	}
 
 	public void f() {
-		System.out.println("NoDefault.f");
+		System.out.println("NoDefault.f "+i);
 	}
 }
 
@@ -20,11 +20,8 @@ class Second{
 		public NoDefault get2(int i) {
 		// Overrides f():
 		return new NoDefault(i) {
-		public void f() {
-		System.out.println("Second.get2.f");
-		}
-		};
-		}
+		public void f() {System.out.println("Second.get2.f "+i);}};
+	}
 }
 
 public class ReturningAnonymousIC {
