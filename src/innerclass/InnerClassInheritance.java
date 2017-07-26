@@ -38,23 +38,23 @@ public class InnerClassInheritance {
 		@Override
 		public void f() { System.out.println("Inner2.f "+i); }
 	}
-//	public static void main(String[] args){
-//		WithNonDefault wnd = new WithNonDefault();
-//		InnerClassInheritance ici = new InnerClassInheritance();
-//		Inner2 i2 = ici.new Inner2(wnd);
-//		Inner2 i3 = ici.new Inner2(wnd,100);
-//		i2.f();
-//		i3.f();
-//		new D(){
-//
-//			@Override
-//			public void fun() {
-//				System.out.println("BBB");
-//				
-//			}
-//			
-//		}.fun();
-//	}
+	public static void main(String[] args){
+		WithNonDefault wnd = new WithNonDefault();
+		InnerClassInheritance ici = new InnerClassInheritance();
+		Inner2 i2 = ici.new Inner2(wnd);
+		Inner2 i3 = ici.new Inner2(wnd,100);
+		i2.f();
+		i3.f();
+		new D(){
+
+			@Override
+			public void fun() {
+				System.out.println("BBB");
+				
+			}
+			
+		}.fun();
+	}
 }
 
 
