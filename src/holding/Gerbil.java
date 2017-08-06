@@ -1,10 +1,11 @@
 package holding;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Gerbil {
 	private int gerbilNumber;
-	Gerbil(int gerbilNumber){
+	public Gerbil(int gerbilNumber){
 		this.gerbilNumber =gerbilNumber;
 	}
 	void hop(){
@@ -19,8 +20,13 @@ public class Gerbil {
 		for(int i=0;i<5;i++){
 			Gerbils.add(new Gerbil(i));
 		}
-		for(int i=0;i<Gerbils.size();i++){
-			Gerbils.get(i).hop();
-		}
+//		for(int i=0;i<Gerbils.size();i++){
+//			Gerbils.get(i).hop();
+//		}
+		display(Gerbils.iterator());
+	}
+	static void display(Iterator<Gerbil> it) {
+		while(it.hasNext())
+			it.next().hop();
 	}
 }
