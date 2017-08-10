@@ -27,5 +27,6 @@ public class WordsInfo3 {
 				words.put(pos, entry.getKey());
 		}
 		System.out.println(words.values());
+	
 	}
 }
