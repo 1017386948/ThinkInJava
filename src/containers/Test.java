@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.EnumSet;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -33,6 +34,7 @@ public class Test {
 	AbstractList al;
 	Vector v;
 	Collections cs1;
+	EnumSet es;
 
 	public static void main(String[] args) {
 		List<Integer> li = new LinkedList<>(Arrays.asList(1, 2));
