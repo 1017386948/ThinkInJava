@@ -13,6 +13,7 @@ public class Test {
 		exec.execute(new ExceptionThread());
 		Future<String> f;
 		System.out.println(1 | 0x00000001);
+		ThreadLocal<Integer> value = new ThreadLocal<>();
 	}
 }
 
